@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th *ngFor="let col of columns">
+        <span>
+            {{ col?.label | firstLetterUpperCase }}
+        </span>
+    </th>
+  </tr>
+  <tr *ngFor="let cell of values">
+      <td *ngFor="let col of columns">
+          <table-row [cell]="cell" [column]="col"></table-row>
+      </td>
+  </tr>
+</table>
