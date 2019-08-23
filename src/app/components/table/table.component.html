@@ -1,14 +1,20 @@
 <table>
   <tr>
     <th *ngFor="let col of columns">
-        <span>
-            {{ col?.label | firstLetterUpperCase }}
-        </span>
+      <span>
+        {{ col?.label | firstLetterUpperCase }}
+      </span>
     </th>
   </tr>
-  <tr *ngFor="let cellValue of values">
-      <td *ngFor="let col of columns" [style.width]="col?.width">
-            <table-cell [value]="cellValue[col?.label]?.value" [type]="cellValue[col?.label]?.type"></table-cell>
-      </td>
+  <tr *ngFor="let cellValue of values; index as index; trackBy: trackByIndex">
+    <td *ngFor="let col of columns" [style.width]="col?.width">
+      <table-cell [value]="cellValue[(col?.label)]?.value" [type]="cellValue[(col?.label)]?.type"></table-cell>
+    </td>
+    <td>
+        <div>
+            <button (click)="onDelete(index)">Delete</button>
+            <!-- <button (click)="onEdit(cellValue, index)">Edit</button> -->
+        </div>
+    </td>
   </tr>
 </table>

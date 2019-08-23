@@ -15,7 +15,21 @@ const DUMMY: any[] =
       "value": false,
       "type": "checkbox"
     }
-  }
+  },
+  {
+    "task": {
+      "value": "Build type based data structure 999",
+      "type": "text"
+    },
+    "description": {
+      "value": "Design a data structure that can render fields based on type",
+      "type": "input"
+    },
+    "completed": {
+      "value": false,
+      "type": "checkbox"
+    }
+  },
 ];
 
 const COL_DEFS: any[] = [
@@ -29,8 +43,12 @@ const COL_DEFS: any[] = [
   },
   {
     "label": "completed",
-    "width": "30%"
-  }
+    "width": "10%"
+  },
+  // {
+  //   "label": "Actions",
+  //   "width": "30%"
+  // }
 ];
 
 

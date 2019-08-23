@@ -16,4 +16,16 @@ export class TableComponent implements OnInit {
     console.log('table', this.columns, this.values)
   }
 
+  trackByIndex(index: any) {
+    return index;
+  }
+
+  onDelete(index: number) {
+    this.values.splice(index, 1);
+  }
+
+  onEdit(cellValue: any, index: number) {
+    console.log(cellValue, index)
+  }
+
 }
