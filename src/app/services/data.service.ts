@@ -13,7 +13,7 @@ const DUMMY: any[] =
     },
     "completed": {
       "value": false,
-      "type": "checbox"
+      "type": "checkbox"
     }
   }
 ];
@@ -25,7 +25,7 @@ const COL_DEFS: any[] = [
   },
   {
     "label": "description",
-    "width": "60%"
+    "width": "40%"
   },
   {
     "label": "completed",

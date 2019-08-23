@@ -1,0 +1,16 @@
+<div>
+    <ng-container [ngSwitch]="type">
+        <ng-container *ngSwitchCase="'text'">
+            <span>{{ value }}</span>
+        </ng-container>
+        <ng-container *ngSwitchCase="'input'">
+            <input type="text" placeholder="Enter something" [(ngModel)]="value" />
+        </ng-container>
+        <ng-container *ngSwitchCase="'checkbox'">
+            <input type="checkbox" placeholder="Enter something" [(ngModel)]="value" />
+        </ng-container>
+        <ng-container *ngSwitchDefault>
+            <span>{{ value }}</span>
+        </ng-container>
+    </ng-container>
+</div>

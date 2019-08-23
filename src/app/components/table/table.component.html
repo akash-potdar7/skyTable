@@ -6,9 +6,9 @@
         </span>
     </th>
   </tr>
-  <tr *ngFor="let cell of values">
-      <td *ngFor="let col of columns">
-          <table-row [cell]="cell" [column]="col"></table-row>
+  <tr *ngFor="let cellValue of values">
+      <td *ngFor="let col of columns" [style.width]="col?.width">
+            <table-cell [value]="cellValue[col?.label]?.value" [type]="cellValue[col?.label]?.type"></table-cell>
       </td>
   </tr>
 </table>
