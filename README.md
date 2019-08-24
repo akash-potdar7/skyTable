@@ -1,4 +1,10 @@
-# Verloop
+
+Make sure your local anglualar cli is ! < 8 | 7 to run this project
+Easy steps to see it in action =>
+ git clone,
+ cd <dir>,
+ ng build,
+ ng serve. Ideally open http://localhost:4200/ from any browser
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
 
