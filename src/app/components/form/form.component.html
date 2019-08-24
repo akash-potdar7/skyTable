@@ -1,0 +1,48 @@
+<form [formGroup]="taskForm" (ngSubmit)="taskForm.valid && onFormSubmit($event)" novalidate>
+    <fieldset style="width: 50%;">
+        <legend>Task</legend>
+        <div class="fields-container">
+            <div>
+                <label for="task_value">Title</label>
+                <input formControlName="taskValue" id="task_value" type="text" placeholder="Enter task" />
+            </div>
+            <div>
+                <label for="task_type">Input type</label>
+                <select formControlName="taskType" id="task_type">
+                    <option *ngFor="let type of optionTypes">
+                        {{ type }}
+                    </option>
+                </select>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset style="width: 50%;">
+        <legend>Description</legend>
+        <div class="fields-container">
+            <div>
+                <label for="description_value">Title</label>
+                <input formControlName="descriptionValue" id="description_value" type="text" placeholder="Enter task" />
+            </div>
+            <div>
+                <label for="description_type">Input type</label>
+                <select formControlName="descriptionType" id="description_type">
+                    <option *ngFor="let type of optionTypes">
+                        {{ type }}
+                    </option>
+                </select>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset style="width: 20%;">
+        <legend>Completed</legend>
+        <div class="fields-container">
+            <div>
+                <label for="completed_value">Value</label>
+                <input formControlName="completedValue" id="completed_value" type="checkbox" placeholder="Enter task" />
+            </div>
+        </div>
+    </fieldset>
+    <div>
+        <button type="submit">Save</button>
+    </div>
+</form>

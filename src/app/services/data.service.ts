@@ -67,4 +67,8 @@ export class DataService {
     return DUMMY;
   }
 
+  pushTask(task) {
+    return DUMMY.unshift(task);
+  }
+
 }
